@@ -1,0 +1,27 @@
+/* 1. Selector de ID (para un elemento único) */
+#titulo-principal {
+    color: #1D2690;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* 2. Selector de Clase (reutilizable) */
+.card {
+    background-color: #f4f6f9;
+    border: 1px solid #7BB4E3;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+}
+
+.destacado {
+    color: #D9232D;
+    font-weight: bold;
+}
+
+/* 3. Selector Descendiente (aplica solo a los <p> dentro de elementos con la clase .card) */
+.card p {
+    color: #333333;
+    font-size: 1rem;
+    line-height: 1.5;
+}
