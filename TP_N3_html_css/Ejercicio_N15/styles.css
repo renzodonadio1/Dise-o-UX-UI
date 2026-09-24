@@ -1,0 +1,129 @@
+/* Reset global para evitar overflow horizontal */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/*1. ESTILOS BASE: MOBILE FIRST (Pantallas < 768px)*/
+
+.layout-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Una sola columna */
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  gap: 15px;
+  padding: 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* REQUISITO: El Sidebar desaparece en pantallas < 768px */
+.sidebar {
+  display: none;
+}
+
+.header {
+  grid-area: header;
+  background-color: #1D2690;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.main-content {
+  grid-area: main;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 columna en móvil */
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  background-color: #7BB4E3;
+  color: #1D2690;
+  padding: 20px;
+  font-weight: bold;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #1a1a2e;
+  color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+
+/* 2. BREAKPOINT 1: TABLETS Y ESCRITORIO (>= 768px)*/
+@media (min-width: 768px) {
+  .layout-container {
+    grid-template-columns: 220px 1fr; /* Muestra el sidebar en la 1ra columna */
+    grid-template-areas:
+      "header  header"
+      "sidebar main"
+      "footer  footer";
+    gap: 20px;
+    padding: 20px;
+  }
+
+  /* El sidebar reaparece a partir de 768px */
+  .sidebar {
+    display: block;
+    grid-area: sidebar;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  .sidebar ul {
+    list-style: none;
+    margin-top: 15px;
+  }
+
+  .sidebar li {
+    margin-bottom: 10px;
+  }
+
+  .sidebar a {
+    color: #1D2690;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas de tarjetas */
+  }
+}
+
+
+/* 3. BREAKPOINT 2: PANTALLAS GRANDES (>= 1024px) */
+@media (min-width: 1024px) {
+  .layout-container {
+    grid-template-columns: 260px 1fr;
+  }
+
+  .cards-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas de tarjetas */
+  }
+}

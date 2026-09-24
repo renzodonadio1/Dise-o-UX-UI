@@ -1,0 +1,182 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 450px;
+}
+
+h2 {
+  color: #1D2690;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Ocultar los radio buttons de control */
+.step-radio {
+  display: none;
+}
+
+/* --- INDICADOR DE PASOS --- */
+.step-indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.step-badge {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #ccc;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.line {
+  height: 3px;
+  width: 60px;
+  background-color: #ccc;
+}
+
+/* Estilos dinámicos para los números según el paso activo */
+#step1:checked ~ .step-indicator .badge-1 {
+  background-color: #1D2690;
+}
+
+#step2:checked ~ .step-indicator .badge-1,
+#step2:checked ~ .step-indicator .badge-2,
+#step2:checked ~ .step-indicator .line {
+  background-color: #1D2690;
+}
+
+/* --- CONTROL DE PASOS (OCULTAR / MOSTRAR) --- */
+.form-step {
+  display: none; /* Oculto por defecto */
+}
+
+#step1:checked ~ .multistep-form .step-content-1 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#step2:checked ~ .multistep-form .step-content-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-step h3 {
+  font-size: 1.1rem;
+  color: #1a1a2e;
+  margin-bottom: 5px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* ===================================================
+   REQUISITOS: PSEUDO-CLASAS DE VALIDACIÓN NATIVA
+   =================================================== */
+
+input {
+  width: 100%;
+  padding: 12px;
+  font-size: 0.95rem;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Borde Verde para campos requeridos válidos */
+input:required:valid {
+  border-color: #2EE150;
+  box-shadow: 0 0 0 3px rgba(46, 225, 80, 0.15);
+}
+
+/* Borde Rojo para campos requeridos e inválidos (al interactuar o estar incompletos) */
+input:required:invalid:not(:placeholder-shown) {
+  border-color: #D9232D;
+  box-shadow: 0 0 0 3px rgba(217, 35, 45, 0.15);
+}
+
+/* --- BOTONES DE NAVEGACIÓN Y ENVÍO --- */
+.next-btn,
+.submit-btn,
+.prev-btn {
+  display: inline-block;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease;
+}
+
+.next-btn,
+.submit-btn {
+  background-color: #1D2690;
+  color: #ffffff;
+  margin-top: 10px;
+}
+
+.next-btn:hover,
+.submit-btn:hover {
+  background-color: #7BB4E3;
+}
+
+.buttons-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.prev-btn {
+  background-color: #e2e8f0;
+  color: #333;
+  width: 35%;
+}
+
+.prev-btn:hover {
+  background-color: #cbd5e1;
+}
+
+.buttons-group .submit-btn {
+  width: 65%;
+  margin-top: 0;
+}

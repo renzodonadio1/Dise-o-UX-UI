@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio N19 — Formulario Multi-step</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <main class="form-container">
+    <h2>Registro de Usuario</h2>
+
+    <!-- REQUISITO: Radio buttons ocultos que controlan los pasos del formulario -->
+    <input type="radio" name="step" id="step1" class="step-radio" checked>
+    <input type="radio" name="step" id="step2" class="step-radio">
+
+    <!-- Indicador visual de progreso -->
+    <div class="step-indicator">
+      <span class="step-badge badge-1">1</span>
+      <div class="line"></div>
+      <span class="step-badge badge-2">2</span>
+    </div>
+
+    <form action="#" method="POST" class="multistep-form">
+      
+      <!-- PASO 1: Datos Personales -->
+      <section class="form-step step-content-1">
+        <h3>Paso 1: Datos Personales</h3>
+        
+        <div class="form-group">
+          <label for="nombre">Nombre Completo *</label>
+          <!-- REQUISITO: :required -->
+          <input type="text" id="nombre" name="nombre" placeholder="Ej: Renzo Donadío" required minlength="3">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo Electrónico *</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" required>
+        </div>
+
+        <!-- Botón etiquetado para activar el Radio de Paso 2 -->
+        <label for="step2" class="next-btn">Siguiente paso →</label>
+      </section>
+
+      <!-- PASO 2: Cuenta y Confirmación -->
+      <section class="form-step step-content-2">
+        <h3>Paso 2: Datos de Cuenta</h3>
+        
+        <div class="form-group">
+          <label for="usuario">Nombre de Usuario *</label>
+          <input type="text" id="usuario" name="usuario" placeholder="Ej: renzo123" required minlength="4">
+        </div>
+
+        <div class="form-group">
+          <label for="pass">Contraseña *</label>
+          <input type="password" id="pass" name="pass" placeholder="Mínimo 6 caracteres" required minlength="6">
+        </div>
+
+        <div class="buttons-group">
+          <!-- Botón para volver al Paso 1 -->
+          <label for="step1" class="prev-btn">← Volver</label>
+          <button type="submit" class="submit-btn">Completar Registro</button>
+        </div>
+      </section>
+
+    </form>
+  </main>
+
+</body>
+</html>

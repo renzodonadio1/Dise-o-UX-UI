@@ -1,0 +1,141 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+/* --- BARRA DE NAVEGACIÓN PRINCIPAL --- */
+.navbar {
+  background-color: #1D2690;
+  color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+/* REQUISITO: Ocultar el checkbox de la vista */
+.menu-checkbox {
+  display: none;
+}
+
+/* BOTÓN HAMBURGUESA (Label) */
+.hamburger-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 21px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.hamburger-btn .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+/* MENÚ DE NAVEGACIÓN (Mobile First / Oculto por defecto en pantallas chicas) */
+.nav-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #1a1a2e;
+  
+  /* Estado colapsado con transición */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out;
+}
+
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-menu li a {
+  display: block;
+  padding: 15px 20px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: background-color 0.2s ease;
+}
+
+.nav-menu li a:hover {
+  background-color: #7BB4E3;
+  color: #1D2690;
+}
+
+/* ===================================================
+   TRUCO DEL CHECKBOX CON SELECTOR HERMANO (~)
+   =================================================== */
+
+/* Cuando el checkbox está marcado, expande el menú desplegable */
+.menu-checkbox:checked ~ .nav-menu {
+  max-height: 300px; /* Permite la animación de apertura */
+}
+
+/* Opcional: Animar las barras del ícono para formar una "X" al abrir */
+.menu-checkbox:checked ~ .hamburger-btn .bar:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.menu-checkbox:checked ~ .hamburger-btn .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-checkbox:checked ~ .hamburger-btn .bar:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ===================================================
+   DESKTOP: Menú horizontal tradicional (>= 768px)
+   =================================================== */
+@media (min-width: 768px) {
+  .hamburger-btn {
+    display: none; /* Oculta el botón hamburguesa en escritorio */
+  }
+
+  .nav-menu {
+    position: static;
+    background-color: transparent;
+    max-height: none; /* Muestra el menú sin restricciones */
+    width: auto;
+  }
+
+  .nav-menu ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .nav-menu li a {
+    padding: 8px 12px;
+    border-bottom: none;
+    border-radius: 4px;
+  }
+}
+
+.content {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio N17 — Menú Hamburguesa (Solo CSS)</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <div class="logo">MiSitio</div>
+
+    <!-- REQUISITO: Checkbox oculto que controla el estado del menú -->
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+
+    <!-- REQUISITO: Label asociado al checkbox para accesibilidad e interacción -->
+    <label for="menu-toggle" class="hamburger-btn" aria-label="Abrir menú de navegación">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </label>
+
+    <!-- Menú de navegación desplegable -->
+    <nav class="nav-menu">
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Proyectos</a></li>
+        <li><a href="#">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="content">
+    <h1>Ejercicio N17 — Menú Hamburguesa en CSS</h1>
+    <p>Achica la ventana del navegador o prueba en un dispositivo movil.</p>
+  </main>
+
+</body>
+</html>
