@@ -1,0 +1,51 @@
+/* Reset básico de márgenes */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+}
+
+/* 1. Contenedor principal de la barra */
+.navbar {
+    display: flex;                   /* Flexbox para alineación principal */
+    justify-content: space-between;  /* Separa el logo a la izquierda y el menú a la derecha */
+    align-items: center;             /* Centra verticalmente logo y texto */
+    background-color: #1D2690;     /* Fondo azul */
+    padding: 20px 40px;
+}
+
+/* 2. Control del tamaño de la imagen del oso */
+.logo-image {
+    height: 100px;                    /* Ajusta la altura del logo */
+    width: auto;                     /* Mantiene la proporción */
+    display: block;
+}
+
+/* 3. Menú de navegación en fila horizontal */
+.nav-links {
+    display: flex;                   /* Flexbox para poner los <li> en fila */
+    gap: 20px;                       /* Espacio entre cada enlace */
+    list-style: none;                /* Quita las viñetas */
+}
+
+/* Estilo para los textos del menú */
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #7BB4E3;                  /* Efecto hover al pasar el cursor */
+}
+
+main {
+    padding: 30px;
+}
