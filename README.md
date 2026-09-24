@@ -1,4 +1,4 @@
-# Trabajo Práctico N° 3 — Maquetación HTML5 y CSS3 Avanzado
+# Trabajo Práctico N° 3 — Maquetación HTML5 y CSS
 **Diseño UX/UI**  
 **Alumno:** Renzo Donadío  
 
