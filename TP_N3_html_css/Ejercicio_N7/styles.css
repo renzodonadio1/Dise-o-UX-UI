@@ -1,0 +1,58 @@
+/* Aplicación global de box-sizing: border-box */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    padding: 20px;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #1D2690;
+}
+
+/* Contenedor flexible para ubicar las tarjetas en fila */
+.contenedor-tarjetas {
+    display: flex;
+    gap: 15px; /* Espaciado uniforme entre tarjetas */
+    justify-content: center;
+}
+
+/* Aplicación del Modelo de Caja en las tarjetas */
+.card {
+    /* Requisito explícito: box-sizing */
+    box-sizing: border-box;
+    
+    /* Dimensiones */
+    width: 30%; /* Tamaño igual para las tres */
+    
+    /* Padding (espacio interno entre borde y contenido) */
+    padding: 20px;
+    
+    /* Border (borde externo de la tarjeta) */
+    border: 2px solid #7BB4E3;
+    
+    /* Margin (espacio externo extra si se requiere) */
+    margin: 5px;
+    
+    /* Estilos visuales complementarios */
+    background-color: #ffffff;
+    border-radius: 8px;
+}
+
+.card h3 {
+    color: #D9232D;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
