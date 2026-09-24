@@ -1,0 +1,117 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 450px;
+  width: 100%;
+}
+
+/*1. SPINNER DE CARGA (Rotación infinita)*/
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.spinner {
+  width: 45px;
+  height: 45px;
+  border: 5px solid #e2e8f0;
+  border-top-color: #1D2690; /* Color primario destacado */
+  border-radius: 50%;
+  
+  /* REQUISITOS: duration (0.8s), timing-function (linear), iteration-count (infinite) */
+  animation-name: spin;
+  animation-duration: 0.8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.loading-text {
+  font-size: 0.9rem;
+  color: #1D2690;
+  font-weight: bold;
+}
+
+/* Keyframes para la rotación */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*2. TARJETA ANIMADA (Fade-in + Slide-up)*/
+
+.animated-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  width: 100%;
+
+  /* REQUISITOS: Uso de la propiedad abreviada 'animation' */
+  /* Sintaxis: nombre | duración | timing-function | modo de relleno */
+  animation: fadeInUp 1s ease-out forwards;
+}
+
+.animated-card h2 {
+  color: #1D2690;
+  margin-bottom: 12px;
+}
+
+.animated-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.card-btn {
+  background-color: #1D2690;
+  color: #ffffff;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-btn:hover {
+  background-color: #7BB4E3;
+}
+
+/* Keyframes para aparición con elevación */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px); /* Empieza desplazada hacia abajo */
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);    /* Llega a su posición original */
+  }
+}
