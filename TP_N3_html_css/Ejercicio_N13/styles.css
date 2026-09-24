@@ -1,0 +1,105 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Contenedor principal del formulario */
+.form-container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
+  max-width: 480px;
+}
+
+h2 {
+  color: #1D2690;
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.styled-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+/* --- ESTILOS BASE PARA INPUTS, SELECT Y TEXTAREA --- */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 0.95rem;
+  border: 2px solid #ccc;
+  border-radius: 8px; /* Bordes redondeados */
+  outline: none;
+  background-color: #fafafa;
+  /* Transición suave para cambios de estado */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* --- REQUISITO: ESTADO :focus DIFERENCIADO --- */
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #4654f1;                     /* Azul del proyecto */
+  background-color: #ece8e8;
+  box-shadow: 0 0 0 4px rgba(29, 38, 144, 0.15); /* Resplandor suave */
+}
+
+/* --- REQUISITO: BOTÓN CON :hover Y :active --- */
+.submit-btn {
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #1D2690;
+  border: none;
+  border-radius: 8px; /* Bordes redondeados */
+  cursor: pointer;
+  margin-top: 10px;
+  /* Transición suave */
+  transition: background-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+}
+
+/* Estado Hover (al pasar el ratón) */
+.submit-btn:hover {
+  background-color: #5874c4; /* Celeste de acento */
+  color: #0e1561;
+  box-shadow: 0 4px 12px rgba(165, 174, 182, 0.4);
+}
+
+/* Estado Active (al presionar/hacer clic) */
+.submit-btn:active {
+  background-color: #07234d; /* Feedback verde al hacer clic */
+  color: #ffffff;
+  transform: scale(0.98);    /* Leve compresión táctil */
+}

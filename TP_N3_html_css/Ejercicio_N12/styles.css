@@ -1,0 +1,99 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+}
+
+.content {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Espaciador para habilitar el scroll */
+.scroll-filler {
+  height: 1500px;
+  background: linear-gradient(180deg, #ffffff 0%, #e2e8f0 100%);
+  margin-top: 40px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* --- 1. TOOLTIP (position: relative + absolute) --- */
+.tooltip-container {
+  position: relative; /* REQUISITO: Sirve de ancla para el absolute */
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.info-btn {
+  background-color: #1D2690;
+  color: #ffffff;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tooltip-text {
+  position: absolute; /* REQUISITO */
+  bottom: 125%;       /* Se posiciona justo encima del botón */
+  left: 50%;
+  transform: translateX(-50%); /* Centra horizontalmente el tooltip */
+  
+  background-color: #1a1a2e;
+  color: #ffffff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  
+  /* Oculto por defecto */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  
+  z-index: 10;        /* REQUISITO: Asegura que quede por encima de otros elementos */
+}
+
+/* Mostrar tooltip al hacer hover */
+.tooltip-container:hover .tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* --- 2. BOTÓN "VOLVER ARRIBA" (position: fixed) --- */
+.back-to-top {
+  position: fixed;   /* REQUISITO: Fijo en la pantalla durante el scroll */
+  bottom: 30px;      /* Distancia desde el borde inferior */
+  right: 30px;       /* Distancia desde el borde derecho */
+  
+  width: 50px;
+  height: 50px;
+  background-color: #1f94d8; /* Rojo principal */
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  
+  z-index: 100;      /* REQUISITO: Mantiene el botón siempre al frente */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.back-to-top:hover {
+  background-color: #164f99; /* Cambia a verde en hover */
+  transform: scale(1.1);
+}

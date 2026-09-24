@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  color: #fff;
+}
+
+/* --- REQUISITOS CSS GRID --- */
+.grid-container {
+  display: grid;
+  min-height: 100vh; /* Ocupa todo el alto de la pantalla */
+
+  /* Columnas: la barra lateral toma 220px y el contenido ocupa el resto (1fr) */
+  grid-template-columns: 220px 1fr;
+
+  /* Filas: header y footer con alto automático, el contenido toma el espacio sobrante (1fr) */
+  grid-template-rows: auto 1fr auto;
+
+  /* Nombres de las áreas distribuidas en la rejilla */
+  grid-template-areas:
+    "header  header"
+    "sidebar content"
+    "footer  footer";
+}
+
+/* Asignación explícita de áreas a cada etiqueta */
+.header {
+  grid-area: header;
+  background-color: #1D2690; /* Azul principal */
+  padding: 20px;
+  text-align: center;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #7BB4E3; /* Celeste claro */
+  color: #1D2690;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  margin-top: 15px;
+}
+
+.sidebar li {
+  margin-bottom: 10px;
+}
+
+.sidebar a {
+  color: #1D2690;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content {
+  grid-area: content;
+  background-color: #ffffff;
+  color: #333333;
+  padding: 30px;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #1a1a2e;
+  padding: 15px;
+  text-align: center;
+  font-size: 0.9rem;
+}

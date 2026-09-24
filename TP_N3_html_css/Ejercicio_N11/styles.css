@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 1.3rem;
+  color: #1d2bca;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Estilos de la lista */
+.custom-list {
+  list-style: none;
+}
+
+.custom-list li {
+  margin-bottom: 20px;
+}
+
+/* Base de los enlaces */
+.custom-list a {
+  display: block;
+  padding: 12px 16px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+/* --- 1. PSEUDO-CLASE :nth-child() --- */
+/* Alterna los colores de fondo entre elementos pares e impares */
+.custom-list li:nth-child(odd) a {
+  background-color: #3c4bec; /* Azul principal */
+}
+
+.custom-list li:nth-child(even) a {
+  background-color: #0b1158; /* Azul más oscuro para contraste */
+}
+
+/* --- 2. PSEUDO-ELEMENTO ::before --- */
+/* Agrega una flecha decorativa antes del texto de cada enlace */
+.custom-list a::before {
+  content: "➔";               /* Ícono o símbolo decorativo */
+  margin-right: 10px;
+  color: #2EE150;             /* Verde dinámico */
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+/* --- 3. PSEUDO-CLASE :hover --- */
+/* Cambia el estilo y desplaza el ícono al pasar el ratón */
+.custom-list a:hover {
+  background-color: #7BB4E3;  /* Celeste claro */
+  color: #1D2690;
+  padding-left: 22px;          /* Desplazamiento sutil hacia la derecha */
+}
