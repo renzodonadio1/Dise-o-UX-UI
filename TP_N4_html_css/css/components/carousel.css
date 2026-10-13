@@ -1,0 +1,53 @@
+/* --- ESTILOS GENERALES DEL CARRUSEL --- */
+.carousel {
+  position: relative; /* Importante para posicionar los botones de forma absoluta */
+  width: 100%;
+  overflow: hidden; /* Oculta las tarjetas que no caben en vista */
+}
+
+.carousel__track {
+  display: flex; /* Alinea las tarjetas horizontalmente */
+  gap: var(--space-24); /* Espacio entre tarjetas */
+  transition: transform 0.3s ease; /* Transición suave para el desplazamiento */
+}
+
+/* --- ESTILOS DE LOS BOTONES DE NAVEGACIÓN --- */
+.carousel__btn {
+  position: absolute; /* Posiciona los botones de forma absoluta sobre el carrusel */
+  top: 50%; /* Centra verticalmente */
+  transform: translateY(-50%); /* Ajuste fino para el centrado vertical */
+  
+  width: 48px; /* Ancho del botón circular */
+  height: 48px; /* Alto del botón circular */
+  border-radius: 50%; /* Hace el botón circular */
+  background-color: var(--color-sand-light, #f1e9df); /* Fondo beige claro */
+  
+  border: none; /* Elimina el borde por defecto */
+  display: flex; /* Centra el icono dentro del botón */
+  align-items: center;
+  justify-content: center;
+  
+  cursor: pointer; /* Cambia el cursor a mano */
+  z-index: 10; /* Asegura que estén por encima de las tarjetas */
+  transition: background-color 0.2s ease; /* Transición para el efecto hover */
+}
+
+.carousel__btn:hover {
+  background-color: var(--color-espresso-light, #e0d1c1); /* Fondo más oscuro al pasar el ratón */
+}
+
+/* Posiciona el botón 'Anterior' a la izquierda */
+.carousel__btn--prev {
+  left: -24px; /* Ajusta la posición para que sobresalga ligeramente */
+}
+
+/* Posiciona el botón 'Siguiente' a la derecha */
+.carousel__btn--next {
+  right: -24px; /* Ajusta la posición para que sobresalga ligeramente */
+}
+
+/* Estilo para los iconos SVG dentro de los botones */
+.carousel__btn img {
+  width: 24px; /* Tamaño del icono */
+  height: 24px; /* Tamaño del icono */
+}

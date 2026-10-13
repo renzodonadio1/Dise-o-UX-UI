@@ -1,0 +1,41 @@
+.promo-banner {
+  background-color: #f3efe6; /* Color arena de fondo */
+  padding: 60px 0;
+  overflow: hidden;
+}
+
+.promo-banner__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: center;
+}
+
+.promo-banner__content {
+  flex: 1;
+  max-width: 500px;
+}
+
+.promo-banner__title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2b1704;
+  margin-bottom: 20px;
+}
+
+.promo-banner__btn {
+  display: inline-block;
+  background-color: #2b1704;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.promo-banner__images img {
+  max-width: 280px;
+  height: auto;
+  display: block;
+}
