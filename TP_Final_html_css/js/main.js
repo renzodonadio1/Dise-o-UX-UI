@@ -5,19 +5,20 @@
 document.addEventListener('DOMContentLoaded', () => {
   console.log("Encuadre & Gol JS Inicializado 🚀");
 
-  // 1. Lógica del Menú Hamburguesa Mobile (Robustecida)
+  // 1. Menú Hamburguesa Mobile (Navegación Responsive)
   const menuBtn = document.getElementById('menu-btn');
   const mobileMenu = document.getElementById('mobile-menu');
 
   if (menuBtn && mobileMenu) {
+    // Toggle para abrir / cerrar al presionar el botón
     menuBtn.addEventListener('click', (e) => {
-      e.stopPropagation(); // Evita que el evento se propague
+      e.stopPropagation();
       const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
       menuBtn.setAttribute('aria-expanded', !isExpanded);
       mobileMenu.classList.toggle('hidden');
     });
 
-    // Cerrar el menú automáticamente al hacer clic en cualquier enlace de adentro
+    // Cerrar automáticamente al hacer clic en cualquier opción del menú
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -26,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-    // Cerrar el menú si se hace clic fuera de él
+    // Cerrar al hacer clic en cualquier lugar fuera del menú
     document.addEventListener('click', (e) => {
       if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target)) {
         mobileMenu.classList.add('hidden');
@@ -35,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Manejo del Formulario de Contacto / Cotización
+  // 2. Formulario de Contacto / Cotización
   const contactForm = document.querySelector('#contacto form');
 
   if (contactForm) {
@@ -58,68 +59,79 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 3. Interactividad para los botones del Catálogo
+  // 3. Auto-completar mensaje según la opción elegida en Catálogo
   const catalogLinks = document.querySelectorAll('#catalogo a');
   const textareaMensaje = document.getElementById('mensaje');
 
-  catalogLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      const tituloBanner = link.querySelector('h3')?.innerText.replace(/\s+/g, ' ').trim();
-      if (textareaMensaje && tituloBanner) {
-        textareaMensaje.value = `Hola, me interesa encuadrar un cuadro del estilo: "${tituloBanner}". `;
-      }
+  if (catalogLinks.length && textareaMensaje) {
+    catalogLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        const tituloBanner = link.querySelector('h3')?.innerText.replace(/\s+/g, ' ').trim();
+        if (tituloBanner) {
+          textareaMensaje.value = `Hola, me interesa encuadrar un cuadro del estilo: "${tituloBanner}". `;
+        }
+      });
     });
-  });
+  }
+
+  // 4. Carrusel de Momentos & Estadios
+  const carruselMomentos = document.getElementById('carrusel-momentos');
+  const prevBtn = document.getElementById('prevBtn');
+  const nextBtn = document.getElementById('nextBtn');
+
+  if (carruselMomentos && prevBtn && nextBtn) {
+    prevBtn.addEventListener('click', () => {
+      carruselMomentos.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+
+    nextBtn.addEventListener('click', () => {
+      carruselMomentos.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  }
+
+  // 5. Carrusel de Enmarcado de Camisetas
+  const carruselCamisetas = document.getElementById('carrusel-camisetas');
+  const prevCamisetasBtn = document.getElementById('prevCamisetasBtn');
+  const nextCamisetasBtn = document.getElementById('nextCamisetasBtn');
+
+  if (carruselCamisetas && prevCamisetasBtn && nextCamisetasBtn) {
+    prevCamisetasBtn.addEventListener('click', () => {
+      carruselCamisetas.scrollBy({ left: -320, behavior: 'smooth' });
+    });
+
+    nextCamisetasBtn.addEventListener('click', () => {
+      carruselCamisetas.scrollBy({ left: 320, behavior: 'smooth' });
+    });
+  }
 });
-// Lógica para el carrusel de Momentos & Estadios
-const carrusel = document.getElementById('carrusel-momentos');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
 
-if (carrusel && prevBtn && nextBtn) {
-  prevBtn.addEventListener('click', () => {
-    carrusel.scrollBy({ left: -320, behavior: 'smooth' });
-  });
-
-  nextBtn.addEventListener('click', () => {
-    carrusel.scrollBy({ left: 320, behavior: 'smooth' });
-  });
-}
-
-// Lógica para el carrusel de Trabajos Realizados (Camisetas)
-const carruselCamisetas = document.getElementById('carrusel-camisetas');
-const prevCamisetasBtn = document.getElementById('prevCamisetasBtn');
-const nextCamisetasBtn = document.getElementById('nextCamisetasBtn');
-
-if (carruselCamisetas && prevCamisetasBtn && nextCamisetasBtn) {
-  prevCamisetasBtn.addEventListener('click', () => {
-    carruselCamisetas.scrollBy({ left: -320, behavior: 'smooth' });
-  });
-
-  nextCamisetasBtn.addEventListener('click', () => {
-    carruselCamisetas.scrollBy({ left: 320, behavior: 'smooth' });
-  });
-}
-function changeImage(src, title, description) {
-  // Cambiar la fuente de la imagen principal
+// 6. Visor Interactivo de Imágenes / Miniaturas (Función Global)
+function changeImage(event, src, title, description) {
   const mainImage = document.getElementById('main-image');
-  mainImage.style.opacity = '0';
+  if (mainImage) {
+    mainImage.style.opacity = '0';
+    
+    setTimeout(() => {
+      mainImage.src = src;
+      mainImage.style.opacity = '1';
+    }, 150);
+  }
+
+  const titleEl = document.getElementById('product-title');
+  const descEl = document.getElementById('product-desc');
   
-  setTimeout(() => {
-    mainImage.src = src;
-    mainImage.style.opacity = '1';
-  }, 150);
+  if (titleEl && title) titleEl.innerText = title;
+  if (descEl && description) descEl.innerText = description;
 
-  // Cambiar textos dinámicos opcionales
-  document.getElementById('product-title').innerText = title;
-  document.getElementById('product-desc').innerText = description;
-
-  // Gestionar clases activas en los botones de miniaturas
+  // Actualizar el estado visual del borde activo en las miniaturas
   const buttons = document.querySelectorAll('.thumb-btn');
   buttons.forEach(btn => {
     btn.classList.remove('border-white');
     btn.classList.add('border-transparent');
   });
-  event.currentTarget.classList.remove('border-transparent');
-  event.currentTarget.classList.add('border-white');
+
+  if (event && event.currentTarget) {
+    event.currentTarget.classList.remove('border-transparent');
+    event.currentTarget.classList.add('border-white');
+  }
 }
