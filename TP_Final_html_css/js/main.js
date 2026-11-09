@@ -71,3 +71,17 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+// Lógica para el carrusel de Momentos & Estadios
+const carrusel = document.getElementById('carrusel-momentos');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+if (carrusel && prevBtn && nextBtn) {
+  prevBtn.addEventListener('click', () => {
+    carrusel.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+
+  nextBtn.addEventListener('click', () => {
+    carrusel.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+}
