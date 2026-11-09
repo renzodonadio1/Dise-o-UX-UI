@@ -35,6 +35,18 @@
     }
   </script>
 </head>
+<style>
+  /* Ocultar barra de scroll en todos los navegadores */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none !important;
+    width: 0px !important;
+    height: 0px !important;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none !important;
+    scrollbar-width: none !important;
+  }
+</style>
 </head>
 <body class="bg-brand-50 text-brand-900 font-sans antialiased selection:bg-brand-800 selection:text-white">
 
@@ -187,63 +199,29 @@
       </div>
     </section>
 
-    <!-- 4. SECCIÓN CATÁLOGO (ESTILO BANNERS CON FONDO) -->
-    <section id="catalogo" class="scroll-mt-24 py-20 md:py-32 border-b border-slate-200 bg-white">
-      <div class="max-w-6xl mx-auto px-6 space-y-12">
-        <div class="text-center md:text-left space-y-2">
-          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">02 / Catálogo</h2>
-          <p class="text-3xl font-light text-brand-900">Elegí el formato para tu pasión</p>
-        </div>
 
-        <!-- Grilla Estilo Banners / Categorías -->
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          
-         <!-- Banner Principal Izquierda (Enmarcado de Camisetas con foto real) -->
-          <a href="#trabajos-realizados" class="group relative block aspect-[4/5] md:aspect-auto md:h-full min-h-[420px] overflow-hidden bg-slate-900">
-            <div class="absolute inset-0 bg-slate-950/60 group-hover:bg-slate-950/50 transition-colors z-10"></div>
-            <div class="absolute inset-0 bg-cover bg-center opacity-50 group-hover:scale-105 transition-transform duration-700" style="background-image: url('img/cuadro-real.jpg');"></div>
-            
-            <div class="relative z-20 h-full flex flex-col items-center justify-center text-center p-8 text-white space-y-6">
-              <h3 class="text-3xl sm:text-4xl font-light tracking-wide uppercase">Enmarcado de <br><span class="font-semibold">Camisetas</span></h3>
-              <span class="inline-block px-6 py-2.5 text-xs font-medium uppercase tracking-widest border border-white/80 group-hover:bg-white group-hover:text-brand-900 transition-all">
-                Ver Trabajos
-              </span>
-            </div>
-          </a>
-          <!-- Columna Derecha (Dos banners apilados) -->
-          <div class="grid grid-cols-1 gap-6">
-            
-            <!-- Banner Superior Derecho (Momentos Históricos / Fotos) -->
-            <a href="#momentos-estadios" class="group relative block h-[240px] overflow-hidden bg-slate-900">
-              <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/50 transition-colors z-10"></div>
-              <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=1000&auto=format&fit=crop');"></div>
-              
-              <div class="relative z-20 h-full flex flex-col items-center justify-center text-center p-6 text-white space-y-4">
-                <h3 class="text-2xl font-light tracking-wide uppercase">Momentos & Estadios</h3>
-                <span class="inline-block px-5 py-2 text-[10px] font-medium uppercase tracking-widest border border-white/80 group-hover:bg-white group-hover:text-brand-900 transition-all">
-                  Ver Cuadros
-                </span>
-              </div>
-            </a>
+<!-- CATEGORÍAS PRINCIPALES (SOLO ENMARCADO Y MOMENTOS) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto px-6 py-12">
+  
+  <!-- Categoría 1: Enmarcado de Camisetas -->
+  <a href="#trabajos-realizados" class="relative group overflow-hidden rounded-sm aspect-[16/10] bg-slate-900 border border-white/10 block">
+    <img src="img/encuadre-olimpia.jpg" alt="Enmarcado de Camisetas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60">
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-8 space-y-3">
+      <h3 class="text-2xl font-light text-white tracking-wide">Enmarcado de Camisetas</h3>
+      <span class="inline-block text-xs font-semibold uppercase tracking-widest text-slate-300 border-b border-white pb-1 w-max">Ver Trabajos</span>
+    </div>
+  </a>
 
-            <!-- Banner Inferior Derecho (Sets y Escudos / Arte Minimalista) -->
-            <a href="#contacto" class="group relative block h-[240px] overflow-hidden bg-slate-900">
-              <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/50 transition-colors z-10"></div>
-              <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1000&auto=format&fit=crop');"></div>
-              
-              <div class="relative z-20 h-full flex flex-col items-center justify-center text-center p-6 text-white space-y-4">
-                <h3 class="text-2xl font-light tracking-wide uppercase">Sets & Arte Táctico</h3>
-                <span class="inline-block px-5 py-2 text-[10px] font-medium uppercase tracking-widest border border-white/80 group-hover:bg-white group-hover:text-brand-900 transition-all">
-                  Ver Diseños
-                </span>
-              </div>
-            </a>
+  <!-- Categoría 2: Momentos & Estadios -->
+  <a href="#carrusel-momentos" class="relative group overflow-hidden rounded-sm aspect-[16/10] bg-slate-900 border border-white/10 block">
+    <img src="img/garnacho.jpg" alt="Momentos & Estadios" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 opacity-60">
+    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-8 space-y-3">
+      <h3 class="text-2xl font-light text-white tracking-wide">Momentos & Estadios</h3>
+      <span class="inline-block text-xs font-semibold uppercase tracking-widest text-slate-300 border-b border-white pb-1 w-max">Ver Cuadros</span>
+    </div>
+  </a>
 
-          </div>
-
-        </div>
-      </div>
-    </section>
+</div>
 
     <!-- SECCIÓN INTERNA / DETALLE DE CATÁLOGO (Oculta por defecto) -->
   <section id="detalle-catalogo" class="hidden py-20 px-6 bg-slate-900 border-b border-white/10 transition-all duration-300">
@@ -277,92 +255,121 @@
     </div>
   </section>
 
-  <!-- SECCIÓN: TRABAJOS REALIZADOS & TESTIMONIOS -->
+  <!-- SECCIÓN: TRABAJOS REALIZADOS (CARRUSEL IDÉNTICO AL DE MOMENTOS) -->
 <section id="trabajos-realizados" class="py-20 md:py-32 bg-slate-950 text-white border-t border-white/10">
-  <div class="max-w-6xl mx-auto px-6 space-y-16">
+  <div class="max-w-6xl mx-auto px-6 space-y-12">
     
     <!-- Encabezado de la Sección -->
-    <div class="text-center space-y-4">
-      <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">02.1 / Galería de Entregas</h2>
+    <div class="text-center md:text-left space-y-4">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">02.1 / Catálogo de Enmarcados</h2>
       <p class="text-3xl sm:text-4xl font-light text-white">Trabajos Realizados</p>
-      <p class="text-sm text-slate-300 max-w-lg mx-auto font-light">
-        Conocé algunas de las reliquias históricas y camisetas de colección que pasaron por nuestro taller artesanal, junto a la opinión de nuestros clientes.
+      <p class="text-sm text-slate-300 max-w-lg font-light">
+        Cada camiseta cuenta una historia única. Las protegemos y lucimos con cristal de alta seguridad y diseño museológico.
       </p>
     </div>
 
-    <!-- Grilla de Tarjetas (Trabajos + Opiniones) -->
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <!-- Contenedor Relativo para el Carrusel y los Botones Laterales -->
+    <div class="relative group">
       
-      <!-- Trabajo 1: Camiseta Olimpia -->
-      <article class="bg-slate-900 border border-white/10 p-6 flex flex-col justify-between group hover:border-white/30 transition-all rounded-sm">
-        <div class="space-y-4">
-          <div class="overflow-hidden aspect-[4/5] bg-slate-950 rounded-sm">
-            <img src="img/encuadre-olimpia.jpg" alt="Camiseta Olimpia enmarcada en caja de sombra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="space-y-1">
-            <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider">Edición Especial</span>
-            <h3 class="text-lg font-medium text-white">Camiseta Olimpia Firmada</h3>
-          </div>
-          <p class="text-xs text-slate-300 leading-relaxed font-light">
-            Enmarcado artesanal en caja de sombra negra, con conservación textil libre de adhesivos y chapa metálica grabada.
-          </p>
-        </div>
-        
-        <!-- Testimonio del Cliente -->
-        <blockquote class="mt-6 border-l-2 border-slate-600 pl-4 py-1 text-xs text-slate-300 italic font-light bg-slate-950/50 p-3 rounded-r-sm">
-          "Impresionante el nivel de detalle. La camiseta quedó protegida y luce hermosa en mi sala de estar."
-          <span class="block not-italic font-semibold text-white mt-1 text-[11px]">— Julián M.</span>
-        </blockquote>
-      </article>
+      <!-- Botón Izquierdo Lateral -->
+      <button id="prevCamisetasBtn" class="absolute -left-4 sm:-left-6 top-1/2 -translate-y-1/2 z-10 p-3 bg-slate-900/90 border border-white/20 hover:border-white text-white shadow-xl transition-all rounded-full focus:outline-none" aria-label="Anterior">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+      </button>
 
- <!-- Trabajo 2: Cuadro Boca Juniors -->
-      <article class="bg-slate-900 border border-white/10 p-6 flex flex-col justify-between group hover:border-white/30 transition-all rounded-sm">
-        <div class="space-y-4">
-          <div class="overflow-hidden aspect-[4/5] bg-slate-950 rounded-sm">
-            <img src="img/encuadre-boca.jpg" alt="Cuadro institucional de Boca Juniors enmarcado" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="space-y-1">
-            <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider">Escudo Institucional</span>
-            <h3 class="text-lg font-medium text-white">Cuadro CABJ — Edición Xeneize</h3>
-          </div>
-          <p class="text-xs text-slate-300 leading-relaxed font-light">
-            Enmarcado en bastidor de madera de alta densidad con diseño gráfico exclusivo institucional y acabado de protección UV.
-          </p>
-        </div>
+      <!-- Carrusel (Scroll Snap con la misma estructura) -->
+      <div id="carrusel-camisetas" class="flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory no-scrollbar py-4 px-2">
         
-        <!-- Testimonio del Cliente -->
-        <blockquote class="mt-6 border-l-2 border-slate-600 pl-4 py-1 text-xs text-slate-300 italic font-light bg-slate-950/50 p-3 rounded-r-sm">
-          "Hermoso cuadro para el quincho. Los colores azul y oro resaltan un montón y la calidad del marco es excelente."
-          <span class="block not-italic font-semibold text-white mt-1 text-[11px]">— Matías R.</span>
-        </blockquote>
-      </article>
+        <!-- Slide 1: Olimpia -->
+        <article class="min-w-[85%] sm:min-w-[45%] md:min-w-[31%] snap-start bg-slate-900 border border-white/10 p-6 flex flex-col justify-between group/card hover:border-white/30 transition-all rounded-sm">
+          <div class="space-y-4">
+            <div class="overflow-hidden aspect-[4/5] bg-slate-950 rounded-sm">
+              <img src="img/encuadre-olimpia.jpg" alt="Cuadro de camiseta del Club Olimpia" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider">Edición Coleccionista</span>
+              <h3 class="text-lg font-medium text-white">Olimpia — Franjeado Glorioso</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed font-light">
+              Enmarcado profesional con fondo texturizado negro mate, doble passe-partout institucional y cristal anti-reflejo.
+            </p>
+          </div>
+          <blockquote class="mt-6 border-l-2 border-slate-600 pl-4 py-1 text-xs text-slate-300 italic font-light bg-slate-950/50 p-3 rounded-r-sm">
+            "Llevar la camiseta del Decano a este nivel de presentación superó lo que imaginaba. Hermoso trabajo."
+            <span class="block not-italic font-semibold text-white mt-1 text-[11px]">— Rodrigo M.</span>
+          </blockquote>
+        </article>
 
-<!-- Trabajo 3: Camiseta Oficial River Plate Firmada -->
-      <article class="bg-slate-900 border border-white/10 p-6 flex flex-col justify-between group hover:border-white/30 transition-all rounded-sm">
-        <div class="space-y-4">
-          <div class="overflow-hidden aspect-[4/5] bg-slate-950 rounded-sm">
-            <img src="img/encuadre-river.jpg" alt="Camiseta oficial de River Plate firmada enmarcada" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+        <!-- Slide 2: Boca Juniors -->
+        <article class="min-w-[85%] sm:min-w-[45%] md:min-w-[31%] snap-start bg-slate-900 border border-white/10 p-6 flex flex-col justify-between group/card hover:border-white/30 transition-all rounded-sm">
+          <div class="space-y-4">
+            <div class="overflow-hidden aspect-[4/5] bg-slate-950 rounded-sm">
+              <img src="img/encuadre-boca.jpg" alt="Cuadro de camiseta de Boca Juniors" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider">Mística Azul y Oro</span>
+              <h3 class="text-lg font-medium text-white">Boca Juniors — Edición Histórica</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed font-light">
+              Montaje flotante tridimensional que realza los colores de la franja, con chasis de aluminio y protección UV.
+            </p>
           </div>
-          <div class="space-y-1">
-            <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider">Manto Sagrado</span>
-            <h3 class="text-lg font-medium text-white">Camiseta Oficial — River Plate</h3>
+          <blockquote class="mt-6 border-l-2 border-slate-600 pl-4 py-1 text-xs text-slate-300 italic font-light bg-slate-950/50 p-3 rounded-r-sm">
+            "La atención al detalle con los colores y el escudo es tremenda. Quedó de exposición."
+            <span class="block not-italic font-semibold text-white mt-1 text-[11px]">— Matías R.</span>
+          </blockquote>
+        </article>
+
+        <!-- Slide 3: River Plate -->
+        <article class="min-w-[85%] sm:min-w-[45%] md:min-w-[31%] snap-start bg-slate-900 border border-white/10 p-6 flex flex-col justify-between group/card hover:border-white/30 transition-all rounded-sm">
+          <div class="space-y-4">
+            <div class="overflow-hidden aspect-[4/5] bg-slate-950 rounded-sm">
+              <img src="img/encuadre-river.jpg" alt="Cuadro de camiseta de River Plate" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider">Pasión Sagrada</span>
+              <h3 class="text-lg font-medium text-white">River Plate — Manto Sagrado</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed font-light">
+              Diseño minimalista con la banda roja destacada en contraste absoluto sobre bastidor de madera negra laqueada.
+            </p>
           </div>
-          <p class="text-xs text-slate-300 leading-relaxed font-light">
-            Enmarcado en caja de sombra profunda con sistema de sujeción textil invisible, chapa conmemorativa y vidrio de alta protección.
-          </p>
-        </div>
-        
-        <!-- Testimonio del Cliente -->
-        <blockquote class="mt-6 border-l-2 border-slate-600 pl-4 py-1 text-xs text-slate-300 italic font-light bg-slate-950/50 p-3 rounded-r-sm">
-          "Una locura cómo quedó la banda roja y todas las firmas cuidadas al milímetro. Se nota la pasión y el profesionalismo en cada detalle."
-          <span class="block not-italic font-semibold text-white mt-1 text-[11px]">— Ramiro F.</span>
-        </blockquote>
-      </article>
+          <blockquote class="mt-6 border-l-2 border-slate-600 pl-4 py-1 text-xs text-slate-300 italic font-light bg-slate-950/50 p-3 rounded-r-sm">
+            "Impecable cómo se luce la banda con el fondo oscuro. Muy profesionales en la terminación."
+            <span class="block not-italic font-semibold text-white mt-1 text-[11px]">— Juan P.</span>
+          </blockquote>
+        </article>
+
+        <!-- Slide 4: Selección Argentina -->
+        <article class="min-w-[85%] sm:min-w-[45%] md:min-w-[31%] snap-start bg-slate-900 border border-white/10 p-6 flex flex-col justify-between group/card hover:border-white/30 transition-all rounded-sm">
+          <div class="space-y-4">
+            <div class="overflow-hidden aspect-[4/5] bg-slate-950 rounded-sm">
+              <img src="img/encuadre-messi.jpg" alt="Cuadro de camiseta de la Selección Argentina" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider">Gloria Albiceleste</span>
+              <h3 class="text-lg font-medium text-white">Selección Argentina — 3 Estrellas</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed font-light">
+              Enmarcado premium conmemorativo con detalles de las tres estrellas y placa metálica grabada con láser.
+            </p>
+          </div>
+          <blockquote class="mt-6 border-l-2 border-slate-600 pl-4 py-1 text-xs text-slate-300 italic font-light bg-slate-950/50 p-3 rounded-r-sm">
+            "El homenaje perfecto para la camiseta más importante de nuestras vidas. Emoción pura."
+            <span class="block not-italic font-semibold text-white mt-1 text-[11px]">— Hernán C.</span>
+          </blockquote>
+        </article>
+
+      </div>
+
+      <!-- Botón Derecho Lateral -->
+      <button id="nextCamisetasBtn" class="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 bg-slate-900/90 border border-white/20 hover:border-white text-white shadow-xl transition-all rounded-full focus:outline-none" aria-label="Siguiente">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      </button>
+
     </div>
   </div>
 </section>
-
-<!-- SECCIÓN: MOMENTOS & ESTADIOS (CARRUSEL CON BOTONES A LOS LADOS) -->
+<!-- SECCIÓN: MOMENTOS & ESTADIOS (CARRUSEL EXTENDIDO) -->
 <section id="momentos-estadios" class="py-20 md:py-32 bg-slate-900 text-white border-t border-white/10">
   <div class="max-w-6xl mx-auto px-6 space-y-12">
     
@@ -446,17 +453,56 @@
           </blockquote>
         </article>
 
-      </div>
+        <!-- Slide 4: Cuadro Gol del Siglo Argentina 1986 -->
+        <article class="min-w-[85%] sm:min-w-[45%] md:min-w-[31%] snap-start bg-slate-950 border border-white/10 p-6 flex flex-col justify-between group/card hover:border-white/30 transition-all rounded-sm">
+          <div class="space-y-4">
+            <div class="overflow-hidden aspect-[4/5] bg-slate-900 rounded-sm">
+              <img src="img/cuadro-argentina.jpg" alt="Cuadro secuencial del Gol del Siglo de Maradona contra Inglaterra en México 1986" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider">México 1986</span>
+              <h3 class="text-lg font-medium text-white">El Gol del Siglo — Argentina vs Inglaterra</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed font-light">
+              Secuencia fotográfica histórica enmarcada con passe-partout superior, tipografía conmemorativa y marco fino de madera noble.
+            </p>
+          </div>
+          <blockquote class="mt-6 border-l-2 border-slate-600 pl-4 py-1 text-xs text-slate-300 italic font-light bg-slate-900/50 p-3 rounded-r-sm">
+            "Ver la secuencia completa de la corrida de Diego en el living es una locura hermosa. Calidad impecable."
+            <span class="block not-italic font-semibold text-white mt-1 text-[11px]">— Martín B.</span>
+          </blockquote>
+        </article>
+
+       <!-- Slide 5: Cuadro Silence the Noise -->
+        <article class="min-w-[85%] sm:min-w-[45%] md:min-w-[31%] snap-start bg-slate-950 border border-white/10 p-6 flex flex-col justify-between group/card hover:border-white/30 transition-all rounded-sm">
+          <div class="space-y-4">
+            <div class="overflow-hidden aspect-[4/5] bg-slate-900 rounded-sm">
+              <img src="img/silence-the-noise.jpg" alt="Cuadro de celebración deportiva con tipografía Silence the Noise" class="w-full h-full object-cover group-hover/card:scale-105 transition-transform duration-500">
+            </div>
+            <div class="space-y-1">
+              <span class="text-[10px] uppercase font-semibold text-slate-400 tracking-wider">Edición Urbana</span>
+              <h3 class="text-lg font-medium text-white">Silence the Noise</h3>
+            </div>
+            <p class="text-xs text-slate-300 leading-relaxed font-light">
+              Póster deportivo de alto impacto con tipografía minimalista en relieve, montado bajo marco negro mate de diseño moderno.
+            </p>
+          </div>
+          <blockquote class="mt-6 border-l-2 border-slate-600 pl-4 py-1 text-xs text-slate-300 italic font-light bg-slate-900/50 p-3 rounded-r-sm">
+            "Tiene una onda tremenda. El contraste de la foto con la frase en el medio rompe la cabeza, quedó genial en la oficina."
+            <span class="block not-italic font-semibold text-white mt-1 text-[11px]">— Ignacio T.</span>
+          </blockquote>
+        </article>
 
       <!-- Botón Derecho Lateral -->
       <button id="nextBtn" class="absolute -right-4 sm:-right-6 top-1/2 -translate-y-1/2 z-10 p-3 bg-slate-950/90 border border-white/20 hover:border-white text-white shadow-xl transition-all rounded-full focus:outline-none" aria-label="Siguiente">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
       </button>
+      
 
     </div>
-  </div>
+  </div>  
 </section>
-
+</section>
 <!-- 4. SECCIÓN SKILLS / TÉCNICAS & MATERIALES (Con fondo de césped) -->
     <section id="skills" class="relative scroll-mt-24 py-20 md:py-32 border-b border-slate-200 overflow-hidden bg-slate-950">
       

@@ -85,3 +85,41 @@ if (carrusel && prevBtn && nextBtn) {
     carrusel.scrollBy({ left: 320, behavior: 'smooth' });
   });
 }
+
+// Lógica para el carrusel de Trabajos Realizados (Camisetas)
+const carruselCamisetas = document.getElementById('carrusel-camisetas');
+const prevCamisetasBtn = document.getElementById('prevCamisetasBtn');
+const nextCamisetasBtn = document.getElementById('nextCamisetasBtn');
+
+if (carruselCamisetas && prevCamisetasBtn && nextCamisetasBtn) {
+  prevCamisetasBtn.addEventListener('click', () => {
+    carruselCamisetas.scrollBy({ left: -320, behavior: 'smooth' });
+  });
+
+  nextCamisetasBtn.addEventListener('click', () => {
+    carruselCamisetas.scrollBy({ left: 320, behavior: 'smooth' });
+  });
+}
+function changeImage(src, title, description) {
+  // Cambiar la fuente de la imagen principal
+  const mainImage = document.getElementById('main-image');
+  mainImage.style.opacity = '0';
+  
+  setTimeout(() => {
+    mainImage.src = src;
+    mainImage.style.opacity = '1';
+  }, 150);
+
+  // Cambiar textos dinámicos opcionales
+  document.getElementById('product-title').innerText = title;
+  document.getElementById('product-desc').innerText = description;
+
+  // Gestionar clases activas en los botones de miniaturas
+  const buttons = document.querySelectorAll('.thumb-btn');
+  buttons.forEach(btn => {
+    btn.classList.remove('border-white');
+    btn.classList.add('border-transparent');
+  });
+  event.currentTarget.classList.remove('border-transparent');
+  event.currentTarget.classList.add('border-white');
+}
