@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth">
 <head>
+<head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Encuadre & Gol — Enmarcado artesanal de camisetas de fútbol, reliquias y fotografías históricas de colección.">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="description" content="Encuadre & Gol — Enmarcado artesanal de camisetas de fútbol de colección, reliquias y fotografías históricas con conservación museológica.">
+  <meta name="theme-color" content="#020617">
   
-  <!-- Open Graph / Meta etiquetas -->
+  <!-- Open Graph / Meta etiquetas (Redes Sociales) -->
   <meta property="og:title" content="Encuadre & Gol — Cuadros y Camisetas de Fútbol Personalizadas">
-  <meta property="og:description" content="Enmarcado premium para camisetas de colección y momentos históricos del fútbol.">
+  <meta property="og:description" content="Enmarcado artesanal premium para camisetas de colección y momentos históricos del fútbol.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="img/cuadro-real.jpg">
 
   <title>Encuadre & Gol — Enmarcado de Camisetas y Arte de Fútbol</title>
 
-  <!-- Tailwind CSS via CDN (para desarrollo y entrega) -->
+  <!-- Tailwind CSS via CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -32,6 +34,7 @@
       }
     }
   </script>
+</head>
 </head>
 <body class="bg-brand-50 text-brand-900 font-sans antialiased selection:bg-brand-800 selection:text-white">
 
@@ -195,10 +198,10 @@
         <!-- Grilla Estilo Banners / Categorías -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           
-          <!-- Banner Principal Izquierda (Enmarcado de Camisetas) -->
+         <!-- Banner Principal Izquierda (Enmarcado de Camisetas con foto real) -->
           <a href="#contacto" class="group relative block aspect-[4/5] md:aspect-auto md:h-full min-h-[420px] overflow-hidden bg-slate-900">
-            <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/50 transition-colors z-10"></div>
-            <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1000&auto=format&fit=crop');"></div>
+            <div class="absolute inset-0 bg-slate-950/60 group-hover:bg-slate-950/50 transition-colors z-10"></div>
+            <div class="absolute inset-0 bg-cover bg-center opacity-50 group-hover:scale-105 transition-transform duration-700" style="background-image: url('img/cuadro-real.jpg');"></div>
             
             <div class="relative z-20 h-full flex flex-col items-center justify-center text-center p-8 text-white space-y-6">
               <h3 class="text-3xl sm:text-4xl font-light tracking-wide uppercase">Enmarcado de <br><span class="font-semibold">Camisetas</span></h3>
@@ -207,7 +210,6 @@
               </span>
             </div>
           </a>
-
           <!-- Columna Derecha (Dos banners apilados) -->
           <div class="grid grid-cols-1 gap-6">
             
@@ -275,39 +277,122 @@
     </div>
   </section>
 
-    <!-- 5. SECCIÓN CONTACTO -->
-    <section id="contacto" class="scroll-mt-24 py-20 md:py-32 bg-white">
+<!-- 4. SECCIÓN SKILLS / TÉCNICAS & MATERIALES (Con fondo de césped) -->
+    <section id="skills" class="relative scroll-mt-24 py-20 md:py-32 border-b border-slate-200 overflow-hidden bg-slate-950">
+      
+      <!-- Imagen de fondo de césped con capa oscura para contraste -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0 bg-slate-950/75 z-10"></div>
+        <img src="img/cesped.jpg" alt="Césped de campo de fútbol" class="w-full h-full object-cover object-center">
+      </div>
+
+      <div class="relative z-20 max-w-6xl mx-auto px-6 space-y-12 text-white">
+        <div class="space-y-2">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-300">02 / Técnicas & Materiales</h2>
+          <p class="text-3xl font-light text-white">Especialidades de conservación y diseño</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <!-- Categoría 1 -->
+          <div class="p-8 border border-white/15 bg-slate-900/80 backdrop-blur-md space-y-4 shadow-xl">
+            <h3 class="text-lg font-semibold text-white">Conservación Textil</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">Técnicas de montaje flotante y fijación sin adhesivos para proteger las fibras originales de las camisetas históricas.</p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-[10px] font-semibold bg-white/10 border border-white/20 text-white">Sin Ácido</span>
+              <span class="px-2.5 py-1 text-[10px] font-semibold bg-white/10 border border-white/20 text-white">Caja de Sombra</span>
+              <span class="px-2.5 py-1 text-[10px] font-semibold bg-white/10 border border-white/20 text-white">Montaje Inverso</span>
+            </div>
+          </div>
+
+          <!-- Categoría 2 -->
+          <div class="p-8 border border-white/15 bg-slate-900/80 backdrop-blur-md space-y-4 shadow-xl">
+            <h3 class="text-lg font-semibold text-white">Cristales & Protección</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">Uso de vidrios técnicos de alta gama para evitar reflejos molestos y bloquear los rayos UV dañinos.</p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-[10px] font-semibold bg-white/10 border border-white/20 text-white">Antirreflejo</span>
+              <span class="px-2.5 py-1 text-[10px] font-semibold bg-white/10 border border-white/20 text-white">Filtro UV 99%</span>
+              <span class="px-2.5 py-1 text-[10px] font-semibold bg-white/10 border border-white/20 text-white">Acrílico Museo</span>
+            </div>
+          </div>
+
+          <!-- Categoría 3 -->
+          <div class="p-8 border border-white/15 bg-slate-900/80 backdrop-blur-md space-y-4 shadow-xl">
+            <h3 class="text-lg font-semibold text-white">Marquería & Detalles</h3>
+            <p class="text-sm text-slate-300 leading-relaxed">Diseño de bastidores a medida, passe-partout múltiples y placas grabadas conmemorativas.</p>
+            <div class="flex flex-wrap gap-2 pt-2">
+              <span class="px-2.5 py-1 text-[10px] font-semibold bg-white/10 border border-white/20 text-white">Madera Noble</span>
+              <span class="px-2.5 py-1 text-[10px] font-semibold bg-white/10 border border-white/20 text-white">Passe-partout</span>
+              <span class="px-2.5 py-1 text-[10px] font-semibold bg-white/10 border border-white/20 text-white">Placas Grabadas</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. SECCIÓN EXPERIENCIA / TRAYECTORIA DEL TALLER (Adaptada) -->
+    <section id="experiencia" class="scroll-mt-24 py-20 md:py-32 border-b border-slate-200 bg-white">
       <div class="max-w-4xl mx-auto px-6 space-y-12">
+        <div class="space-y-2">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">04 / Trayectoria del Taller</h2>
+          <p class="text-3xl font-light text-brand-900">Evolución y proyectos destacados</p>
+        </div>
+
+        <div class="border-l-2 border-slate-200 pl-6 space-y-12">
+          <div class="relative space-y-2">
+            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-brand-900 border-4 border-white"></span>
+            <span class="text-xs font-semibold tracking-wider text-slate-500 uppercase">2026 — Presente</span>
+            <h3 class="text-xl font-medium text-brand-900">Lanzamiento de la Colección Digital</h3>
+            <p class="text-sm text-slate-600">Desarrollo de la plataforma web interactiva para cotización y exhibición de enmarcados personalizados de camisetas históricas.</p>
+          </div>
+
+
+          <div class="relative space-y-2">
+            <span class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-300 border-4 border-white"></span>
+            <span class="text-xs font-semibold tracking-wider text-slate-500 uppercase">2024 — 2025</span>
+            <h3 class="text-xl font-medium text-brand-900">Taller Artesanal</h3>
+            <p class="text-sm text-slate-600">Inicios en el diseño de marcos a medida y armado de cajas para camisetas.</p>
+          </div>
+    </section>
+    
+    <!-- 5. SECCIÓN CONTACTO (Con la imagen de fondo River-Boca) -->
+    <section id="contacto" class="relative scroll-mt-24 py-20 md:py-32 overflow-hidden bg-slate-950 text-white">
+      
+      <!-- Imagen de fondo con capa oscura semitransparente -->
+      <div class="absolute inset-0 z-0 pointer-events-none">
+        <div class="absolute inset-0 bg-slate-950/80 z-10"></div>
+        <img src="img/river-boca.jpg" alt="Fondo Superclásico River Boca" class="w-full h-full object-cover object-center">
+      </div>
+
+      <div class="relative z-20 max-w-4xl mx-auto px-6 space-y-12">
         <div class="text-center space-y-4">
-          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">03 / Contacto</h2>
-          <p class="text-3xl sm:text-4xl font-light text-brand-900">¿Queremos enmarcar tu reliquia?</p>
-          <p class="text-sm text-slate-600 max-w-lg mx-auto">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-300">03 / Contacto</h2>
+          <p class="text-3xl sm:text-4xl font-light text-white">¿Querés enmarcar tu reliquia?</p>
+          <p class="text-sm text-slate-300 max-w-lg mx-auto font-light">
             Envianos tu consulta o contanos qué camiseta o fotografía histórica querés transformar en un cuadro de colección.
           </p>
         </div>
 
-        <form class="space-y-6 max-w-xl mx-auto" onsubmit="event.preventDefault();">
+        <form class="space-y-6 max-w-xl mx-auto bg-slate-900/90 backdrop-blur-md p-8 border border-white/10 shadow-2xl" onsubmit="event.preventDefault();">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div class="space-y-2">
-              <label for="nombre" class="block text-xs font-medium uppercase tracking-wider text-brand-900">Nombre</label>
-              <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border border-slate-300 rounded-none text-sm focus:outline-none focus:border-brand-900" placeholder="Tu nombre">
+              <label for="nombre" class="block text-xs font-medium uppercase tracking-wider text-slate-200">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-none text-sm text-white placeholder-slate-500 focus:outline-none focus:border-white" placeholder="Tu nombre">
             </div>
             <div class="space-y-2">
-              <label for="email" class="block text-xs font-medium uppercase tracking-wider text-brand-900">Email</label>
-              <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-slate-300 rounded-none text-sm focus:outline-none focus:border-brand-900" placeholder="tu@email.com">
+              <label for="email" class="block text-xs font-medium uppercase tracking-wider text-slate-200">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-none text-sm text-white placeholder-slate-500 focus:outline-none focus:border-white" placeholder="tu@email.com">
             </div>
           </div>
           <div class="space-y-2">
-            <label for="mensaje" class="block text-xs font-medium uppercase tracking-wider text-brand-900">Mensaje / Detalle de la camiseta o cuadro</label>
-            <textarea id="mensaje" name="mensaje" rows="4" required class="w-full px-4 py-3 border border-slate-300 rounded-none text-sm focus:outline-none focus:border-brand-900" placeholder="Contanos de qué equipo es la camiseta, si tiene escudo o detalles especiales..."></textarea>
+            <label for="mensaje" class="block text-xs font-medium uppercase tracking-wider text-slate-200">Mensaje / Detalle de la camiseta o cuadro</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required class="w-full px-4 py-3 bg-slate-950 border border-slate-700 rounded-none text-sm text-white placeholder-slate-500 focus:outline-none focus:border-white" placeholder="Contanos de qué equipo es la camiseta, si tiene escudo o detalles especiales..."></textarea>
           </div>
-          <button type="submit" class="w-full py-4 text-xs font-semibold uppercase tracking-wider text-white bg-brand-900 hover:bg-slate-800 transition-colors">
+          <button type="submit" class="w-full py-4 text-xs font-semibold uppercase tracking-wider text-brand-900 bg-white hover:bg-slate-200 transition-colors">
             Enviar Consulta
           </button>
         </form>
       </div>
     </section>
-
   </main>
 
   <!-- 6. FOOTER CON REDES SOCIALES -->
