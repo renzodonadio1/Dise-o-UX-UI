@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Encuadre & Gol — Enmarcado artesanal de camisetas de fútbol, reliquias y fotografías históricas de colección.">
+  <meta name="theme-color" content="#0f172a">
+  
+  <!-- Open Graph / Meta etiquetas -->
+  <meta property="og:title" content="Encuadre & Gol — Cuadros y Camisetas de Fútbol Personalizadas">
+  <meta property="og:description" content="Enmarcado premium para camisetas de colección y momentos históricos del fútbol.">
+  <meta property="og:type" content="website">
+
+  <title>Encuadre & Gol — Enmarcado de Camisetas y Arte de Fútbol</title>
+
+  <!-- Tailwind CSS via CDN (para desarrollo y entrega) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f8fafc',
+              100: '#f1f5f9',
+              800: '#1e293b',
+              900: '#0f172a',
+              accent: '#334155'
+            }
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-brand-50 text-brand-900 font-sans antialiased selection:bg-brand-800 selection:text-white">
+
+  <!-- Enlace accesible para saltar al contenido principal -->
+  <a href="#contenido-principal" class="sr-only focus:not-sr-only focus:absolute focus:p-4 focus:bg-white focus:text-black focus:z-50">
+    Saltar al contenido principal
+  </a>
+
+  <!-- HEADER / NAVEGACIÓN -->
+  <header class="sticky top-0 z-40 w-full bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#inicio" class="text-xl font-semibold tracking-tight text-brand-900">
+        ENCUADRE <span class="font-light text-slate-500">& GOL</span>
+      </a>
+
+      <!-- Navegación Desktop -->
+      <nav aria-label="Navegación principal" class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#inicio" class="hover:text-slate-600 transition-colors focus-visible:outline-2 focus-visible:outline-brand-900">Inicio</a>
+        <a href="#nosotros" class="hover:text-slate-600 transition-colors focus-visible:outline-2 focus-visible:outline-brand-900">Nosotros</a>
+        <a href="#destacados" class="hover:text-slate-600 transition-colors focus-visible:outline-2 focus-visible:outline-brand-900">Highlights</a>
+        <a href="#catalogo" class="hover:text-slate-600 transition-colors focus-visible:outline-2 focus-visible:outline-brand-900">Catálogo</a>
+        <a href="#contacto" class="hover:text-slate-600 transition-colors focus-visible:outline-2 focus-visible:outline-brand-900">Contacto</a>
+      </nav>
+
+      <!-- CTA Nav -->
+      <div class="hidden md:block">
+        <a href="#contacto" class="inline-flex items-center justify-center px-5 py-2.5 text-xs font-semibold uppercase tracking-wider text-white bg-brand-900 rounded-none hover:bg-slate-800 transition-colors focus-visible:outline-2 focus-visible:outline-brand-900">
+          Encargar Cuadro
+        </a>
+      </div>
+
+      <!-- Menú Hamburguesa Mobile -->
+      <button id="menu-btn" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú de navegación" class="md:hidden p-2 text-brand-900 focus-visible:outline-2 focus-visible:outline-brand-900">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Menú Desplegable Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden border-b border-slate-200 bg-white px-6 py-6 space-y-4">
+      <a href="#inicio" class="block text-base font-medium text-brand-900 hover:text-slate-600">Inicio</a>
+      <a href="#nosotros" class="block text-base font-medium text-brand-900 hover:text-slate-600">Nosotros</a>
+      <a href="#destacados" class="block text-base font-medium text-brand-900 hover:text-slate-600">Highlights</a>
+      <a href="#catalogo" class="block text-base font-medium text-brand-900 hover:text-slate-600">Catálogo</a>
+      <a href="#contacto" class="block text-base font-medium text-brand-900 hover:text-slate-600">Contacto</a>
+      <a href="#contacto" class="block w-full text-center px-5 py-3 text-xs font-semibold uppercase tracking-wider text-white bg-brand-900">
+        Encargar Cuadro
+      </a>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    
+    <!-- 1. SECCIÓN INICIO (HERO) -->
+    <section id="inicio" class="scroll-mt-24 pt-20 pb-24 md:pt-32 md:pb-40 border-b border-slate-200">
+      <div class="max-w-6xl mx-auto px-6 text-center md:text-left grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+        <div class="md:col-span-7 space-y-6">
+          <span class="inline-block text-xs font-semibold uppercase tracking-widest text-slate-500 bg-slate-100 px-3 py-1">
+            Enmarcado de camisetas & arte de fútbol
+          </span>
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-brand-900 leading-[1.15]">
+            Tus reliquias de fútbol <span class="font-semibold block">convertidas en arte.</span>
+          </h1>
+          <p class="text-lg text-slate-600 font-light max-w-xl leading-relaxed">
+            Especialistas en el enmarcado artesanal de camisetas de colección, reliquias deportivas y momentos históricos listos para exhibir.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 pt-4 justify-center md:justify-start">
+            <a href="#catalogo" class="px-7 py-3.5 text-xs font-semibold uppercase tracking-wider text-white bg-brand-900 hover:bg-slate-800 transition-colors text-center">
+              Ver Estilos
+            </a>
+            <a href="#contacto" class="px-7 py-3.5 text-xs font-semibold uppercase tracking-wider text-brand-900 border border-brand-900 hover:bg-slate-100 transition-colors text-center">
+              Enmarcar mi camiseta
+            </a>
+          </div>
+        </div>
+        
+        <!-- Placeholder visual sobrio / Mockup -->
+        <div class="md:col-span-5">
+          <div class="aspect-[4/5] bg-slate-200 border border-slate-300 flex items-center justify-center text-slate-400 p-8">
+            <span class="text-sm uppercase tracking-widest font-mono">[ Mockup Camiseta Enmarcada ]</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. SECCIÓN NOSOTROS (SOBRE MÍ / TALLER) -->
+    <section id="nosotros" class="scroll-mt-24 py-20 md:py-32 border-b border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-6 space-y-16">
+        <div class="max-w-3xl space-y-4">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">01 / Nosotros</h2>
+          <p class="text-2xl sm:text-3xl font-light text-brand-900 leading-snug">
+            Entendemos la pasión por el fútbol. Tratamos cada camiseta y fotografía histórica con el cuidado de una pieza de museo y la precisión del diseño artesanal.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <article class="p-8 border border-slate-200 bg-brand-50 space-y-3">
+            <h3 class="text-lg font-semibold text-brand-900">Cajas Profundas</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Marcos estructurales diseñados con separación de vidrio para exhibir camisetas y reliquias con volumen sin dañar la tela.
+            </p>
+          </article>
+
+          <article class="p-8 border border-slate-200 bg-brand-50 space-y-3">
+            <h3 class="text-lg font-semibold text-brand-900">Protección UV</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Materiales y cristales especiales que protegen las fibras y los colores de las camisetas históricas contra la decoloración.
+            </p>
+          </article>
+
+          <article class="p-8 border border-slate-200 bg-brand-50 space-y-3">
+            <h3 class="text-lg font-semibold text-brand-900">Placas Conmemorativas</h3>
+            <p class="text-sm text-slate-600 leading-relaxed">
+              Opción de incorporar detalles personalizados, escudos y placas grabadas con los datos del partido, fecha o jugador.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. SECCIÓN DESTACADOS (HIGHLIGHTS / MÉTRICAS) -->
+    <section id="destacados" class="scroll-mt-24 py-20 bg-brand-900 text-white">
+      <div class="max-w-6xl mx-auto px-6">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-slate-800">
+          <div class="pt-4 md:pt-0">
+            <p class="text-4xl sm:text-5xl font-light tracking-tight">300+</p>
+            <p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Camisetas Enmarcadas</p>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <p class="text-4xl sm:text-5xl font-light tracking-tight">100%</p>
+            <p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Protección Textil</p>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <p class="text-4xl sm:text-5xl font-light tracking-tight">72hs</p>
+            <p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Asesoramiento Inicial</p>
+          </div>
+          <div class="pt-4 md:pt-0">
+            <p class="text-4xl sm:text-5xl font-light tracking-tight">1°</p>
+            <p class="text-xs uppercase tracking-widest text-slate-400 mt-2">Calidad de Galería</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SECCIÓN CATÁLOGO (ESTILO BANNERS CON FONDO DE FÚTBOL) -->
+    <section id="catalogo" class="scroll-mt-24 py-20 md:py-32 border-b border-slate-200 bg-white">
+      <div class="max-w-6xl mx-auto px-6 space-y-12">
+        <div class="text-center md:text-left space-y-2">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">02 / Catálogo</h2>
+          <p class="text-3xl font-light text-brand-900">Elegí el formato para tu pasión</p>
+        </div>
+
+        <!-- Grilla Estilo Banners / Categorías -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Banner Principal Izquierda (Enmarcado de Camisetas) -->
+          <a href="#contacto" class="group relative block aspect-[4/5] md:aspect-auto md:h-full min-h-[420px] overflow-hidden bg-slate-900">
+            <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/50 transition-colors z-10"></div>
+            <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=1000&auto=format&fit=crop');"></div>
+            
+            <div class="relative z-20 h-full flex flex-col items-center justify-center text-center p-8 text-white space-y-6">
+              <h3 class="text-3xl sm:text-4xl font-light tracking-wide uppercase">Enmarcado de <br><span class="font-semibold">Camisetas</span></h3>
+              <span class="inline-block px-6 py-2.5 text-xs font-medium uppercase tracking-widest border border-white/80 group-hover:bg-white group-hover:text-brand-900 transition-all">
+                Ver Trabajos
+              </span>
+            </div>
+          </a>
+
+          <!-- Columna Derecha (Dos banners apilados) -->
+          <div class="grid grid-cols-1 gap-6">
+            
+            <!-- Banner Superior Derecho (Momentos Históricos / Fotos) -->
+            <a href="#contacto" class="group relative block h-[240px] overflow-hidden bg-slate-900">
+              <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/50 transition-colors z-10"></div>
+              <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=1000&auto=format&fit=crop');"></div>
+              
+              <div class="relative z-20 h-full flex flex-col items-center justify-center text-center p-6 text-white space-y-4">
+                <h3 class="text-2xl font-light tracking-wide uppercase">Momentos & Estadios</h3>
+                <span class="inline-block px-5 py-2 text-[10px] font-medium uppercase tracking-widest border border-white/80 group-hover:bg-white group-hover:text-brand-900 transition-all">
+                  Ver Cuadros
+                </span>
+              </div>
+            </a>
+
+            <!-- Banner Inferior Derecho (Sets y Escudos / Arte Minimalista) -->
+            <a href="#contacto" class="group relative block h-[240px] overflow-hidden bg-slate-900">
+              <div class="absolute inset-0 bg-slate-900/60 group-hover:bg-slate-900/50 transition-colors z-10"></div>
+              <div class="absolute inset-0 bg-cover bg-center opacity-40 group-hover:scale-105 transition-transform duration-700" style="background-image: url('https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1000&auto=format&fit=crop');"></div>
+              
+              <div class="relative z-20 h-full flex flex-col items-center justify-center text-center p-6 text-white space-y-4">
+                <h3 class="text-2xl font-light tracking-wide uppercase">Sets & Arte Táctico</h3>
+                <span class="inline-block px-5 py-2 text-[10px] font-medium uppercase tracking-widest border border-white/80 group-hover:bg-white group-hover:text-brand-900 transition-all">
+                  Ver Diseños
+                </span>
+              </div>
+            </a>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. SECCIÓN CONTACTO -->
+    <section id="contacto" class="scroll-mt-24 py-20 md:py-32 bg-white">
+      <div class="max-w-4xl mx-auto px-6 space-y-12">
+        <div class="text-center space-y-4">
+          <h2 class="text-xs font-semibold uppercase tracking-widest text-slate-400">03 / Contacto</h2>
+          <p class="text-3xl sm:text-4xl font-light text-brand-900">¿Querés enmarcar tu reliquia?</p>
+          <p class="text-sm text-slate-600 max-w-lg mx-auto">
+            Envianos tu consulta o contanos qué camiseta o fotografía histórica querés transformar en un cuadro de colección.
+          </p>
+        </div>
+
+        <form class="space-y-6 max-w-xl mx-auto" onsubmit="event.preventDefault();">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div class="space-y-2">
+              <label for="nombre" class="block text-xs font-medium uppercase tracking-wider text-brand-900">Nombre</label>
+              <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border border-slate-300 rounded-none text-sm focus:outline-none focus:border-brand-900" placeholder="Tu nombre">
+            </div>
+            <div class="space-y-2">
+              <label for="email" class="block text-xs font-medium uppercase tracking-wider text-brand-900">Email</label>
+              <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-slate-300 rounded-none text-sm focus:outline-none focus:border-brand-900" placeholder="tu@email.com">
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label for="mensaje" class="block text-xs font-medium uppercase tracking-wider text-brand-900">Mensaje / Detalle de la camiseta o cuadro</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required class="w-full px-4 py-3 border border-slate-300 rounded-none text-sm focus:outline-none focus:border-brand-900" placeholder="Contanos de qué equipo es la camiseta, si tiene escudo o detalles especiales..."></textarea>
+          </div>
+          <button type="submit" class="w-full py-4 text-xs font-semibold uppercase tracking-wider text-white bg-brand-900 hover:bg-slate-800 transition-colors">
+            Enviar Consulta
+          </button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 6. FOOTER CON REDES SOCIALES -->
+  <footer id="footer" class="bg-brand-900 text-slate-400 py-12 border-t border-slate-800">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="text-center md:text-left space-y-1">
+        <p class="text-sm font-medium text-white">ENCUADRE & GOL</p>
+        <p class="text-xs">© 2026 Todos los derechos reservados.</p>
+      </div>
+
+      <!-- Redes Sociales -->
+      <div class="flex items-center gap-6 text-sm">
+        <a href="#" class="hover:text-white transition-colors" aria-label="Instagram">Instagram</a>
+        <a href="#" class="hover:text-white transition-colors" aria-label="WhatsApp">WhatsApp</a>
+        <a href="#" class="hover:text-white transition-colors" aria-label="LinkedIn">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script para el menú móvil -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+      const isExpanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', !isExpanded);
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
