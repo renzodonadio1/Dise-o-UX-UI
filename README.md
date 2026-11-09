@@ -7,7 +7,7 @@
 
 ---
 
-## 🌐 URL del Proyecto Desplegado
+## URL del Proyecto Desplegado
 * **Sitio Web en Vivo:** [https://renzodonadio1.github.io/Dise-o-UX-UI/](https://renzodonadio1.github.io/Dise-o-UX-UI/)
 * **Prototipo & Design System en Figma:** [Enlace a Figma] *(Reemplazar si corresponde)*
 
