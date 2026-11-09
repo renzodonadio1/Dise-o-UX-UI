@@ -243,6 +243,38 @@
       </div>
     </section>
 
+    <!-- SECCIÓN INTERNA / DETALLE DE CATÁLOGO (Oculta por defecto) -->
+  <section id="detalle-catalogo" class="hidden py-20 px-6 bg-slate-900 border-b border-white/10 transition-all duration-300">
+    <div class="max-w-4xl mx-auto bg-brandDark border border-white/20 p-8 md:p-12 relative shadow-2xl">
+      <!-- Botón para cerrar la sección -->
+      <button id="cerrar-detalle" class="absolute top-6 right-6 text-slate-400 hover:text-white text-sm uppercase tracking-widest bg-white/5 px-3 py-1 border border-white/10 transition-colors">
+        ✕ Cerrar
+      </button>
+
+      <span id="detalle-badge" class="text-xs font-semibold uppercase tracking-widest text-slate-400 block mb-2">Detalle de Categoría</span>
+      <h2 id="detalle-titulo" class="text-2xl md:text-3xl font-light text-white tracking-tight mb-4">Título del estilo</h2>
+      <p id="detalle-descripcion" class="text-slate-300 font-light leading-relaxed mb-6">
+        Aquí se mostrará la descripción detallada, materiales específicos y ejemplos del trabajo seleccionado.
+      </p>
+
+      <div class="grid md:grid-cols-2 gap-6 mb-8">
+        <div class="bg-slate-950 p-6 border border-white/10">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-300 mb-2">Especificaciones Técnicas</h4>
+          <ul id="detalle-specs" class="text-xs text-slate-400 space-y-2">
+            <li>✓ Vidrio antirreflejo de alta resistencia</li>
+            <li>✓ Bastidor interno a medida</li>
+          </ul>
+        </div>
+        <div class="bg-slate-950 p-6 border border-white/10 flex flex-col justify-center items-center text-center">
+          <p class="text-xs text-slate-400 uppercase tracking-widest mb-3">¿Te gusta este formato?</p>
+          <a href="#contacto" id="btn-llevar-cotizador" class="bg-white text-slate-950 px-6 py-2.5 text-xs font-semibold uppercase tracking-wider hover:bg-slate-200 transition-colors">
+            Cotizar este estilo
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
     <!-- 5. SECCIÓN CONTACTO -->
     <section id="contacto" class="scroll-mt-24 py-20 md:py-32 bg-white">
       <div class="max-w-4xl mx-auto px-6 space-y-12">
