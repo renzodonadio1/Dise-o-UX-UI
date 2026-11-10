@@ -52,4 +52,4 @@ El proyecto se encuentra versionado con Git utilizando commits incrementales y d
 ### Pasos para ejecutar localmente:
 1. Clonar el repositorio:
    ```bash
-   git clone [https://github.com/renzodonadio1/Dise-o-UX-UI.git](https://github.com/renzodonadio1/Dise-o-UX-UI.git)
+  git clone https://github.com/renzodonadio1/Dise-o-UX-UI.git
