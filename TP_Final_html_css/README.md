@@ -1,7 +1,7 @@
 > **Trabajo Final Integrador — Diseño UX-UI (2026)**  
 > **Carrera:** Licenciatura en Sistemas de Información  
-> **Institución:** FCyT UADER (Sede Concepción del Uruguay)[cite: 10]  
-> **Alumno:** Renzo Donadío[cite: 10]  
+> **Institución:** FCyT UADER (Sede Concepción del Uruguay)
+> **Alumno:** Renzo Donadío
 
 ---
 
@@ -11,7 +11,7 @@
 
 ---
 
-## ⚽ Sobre el Proyecto
+## ⚽ Sobre el Proyecto ⚽
 **Encuadre & Gol** es un sitio web *one-page* diseñado para un taller especializado en el enmarcado artesanal de camisetas de fútbol de colección, reliquias deportivas y fotografías históricas. 
 
 El proyecto combina un enfoque de diseño minimalista y moderno con una arquitectura de información semántica, responsive y accesible, cumpliendo con los estándares de diseño UX-UI y desarrollo web.
