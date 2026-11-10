@@ -53,4 +53,3 @@ El proyecto se encuentra versionado con Git utilizando commits incrementales y d
 1. Clonar el repositorio:
  git clone https://github.com/renzodonadio1/Dise-o-UX-UI.git
 
-```
