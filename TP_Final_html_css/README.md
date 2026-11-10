@@ -1,4 +1,4 @@
-# Encuadre & Gol — Portfolio Web & Catálogo de Enmarcado Deportivo
+<img width="1818" height="1035" alt="image" src="https://github.com/user-attachments/assets/3bd5390d-59cf-4d2e-9d0a-5f0ed185a5c3" /># Encuadre & Gol — Portfolio Web & Catálogo de Enmarcado Deportivo
 
 > **Trabajo Final Integrador — Diseño UX-UI (2026)**  
 > **Carrera:** Licenciatura en Sistemas de Información  
@@ -8,7 +8,7 @@
 ---
 
 ## URL del Proyecto Desplegado
-* **Sitio Web en Vivo:** [https://renzodonadio1.github.io/Dise-o-UX-UI/](https://renzodonadio1.github.io/Dise-o-UX-UI/)
+* **Sitio Web en Vivo:** https://renzodonadio1.github.io/Dise-o-UX-UI/TP_Final_html_css/
 * **Prototipo & Design System en Figma:** https://www.figma.com/design/nMmOI2DwchsEjJGuLImagD/TP_Final_Ux-Ui?node-id=0-1&p=f&t=CJ0fwbOfLkYimSQA-0
 
 ---
